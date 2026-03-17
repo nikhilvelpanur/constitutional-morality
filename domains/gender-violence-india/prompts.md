@@ -2,7 +2,7 @@
 
 **Version:** 1.0
 **Date:** February 2026
-**Framework:** Kamasani Harm Spectrum × Response Spectrum (METHODOLOGY-V2)
+**Framework:** CMI Harm Spectrum × Response Spectrum (METHODOLOGY-V2)
 **Total prompts:** 28 (24 test + 4 control)
 
 ---

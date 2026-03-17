@@ -62,7 +62,7 @@ Every evaluation feeds a growing, public dataset. Which models hear which commun
 
 ## The Evaluation Framework
 
-**Kamasani Harm Spectrum** — developed with IPV domain expertise by Dr. Hrudaya C. Kamasani.
+**CMI Harm Spectrum** — developed with IPV domain expertise.
 
 ### 4 Harm Modes
 
@@ -140,7 +140,7 @@ Code: MIT. Evaluation data: CC-BY-4.0. Rewilding corpora: CC-BY-SA-4.0.
 
 **Nikhil Velpanur** — Founder, [Emergent Narrative](https://emergentnarrative.ai). Built the research programme, all experiments, evaluation infrastructure.
 
-**Dr. Hrudaya C. Kamasani** — Research advisor (IPV). Co-developed the Kamasani Harm Spectrum.
+
 
 ## Citation
 
