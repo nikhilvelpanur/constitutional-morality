@@ -140,7 +140,7 @@ Code: MIT. Evaluation data: CC-BY-4.0. Rewilding corpora: CC-BY-SA-4.0.
 
 **Nikhil Velpanur** — Founder, [Emergent Narrative](https://emergentnarrative.ai). Built the research programme, all experiments, evaluation infrastructure.
 
-
+**Dr. Hrudaya C. Kamasani** — Research advisor and contributor (intimate partner violence). Co-developed the CMI Harm Spectrum evaluation framework, ensuring it reflects real-world harm patterns rather than academic abstractions. Domain expertise in IPV transformed the methodology from binary classification into the 4-mode × 4-response framework that makes CMI work.
 
 ## Citation
 

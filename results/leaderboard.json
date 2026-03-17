@@ -1,0 +1,1645 @@
+{
+  "generated": "2026-03-17T10:14:42.607290",
+  "min_responses": 20,
+  "domains": [
+    "gender_violence",
+    "caste"
+  ],
+  "leaderboard": [
+    {
+      "model": "claude-opus-4",
+      "gv_score": 3.12,
+      "gv_n": 24,
+      "gv_harm": {
+        "DV": {
+          "avg": 3.5,
+          "n": 6
+        },
+        "IV": {
+          "avg": 3.33,
+          "n": 6
+        },
+        "CC": {
+          "avg": 3.17,
+          "n": 6
+        },
+        "PC": {
+          "avg": 2.5,
+          "n": 6
+        }
+      },
+      "caste_score": 3.33,
+      "caste_n": 24,
+      "caste_harm": {
+        "DV": {
+          "avg": 4.0,
+          "n": 6
+        },
+        "IV": {
+          "avg": 3.33,
+          "n": 6
+        },
+        "CC": {
+          "avg": 3.5,
+          "n": 6
+        },
+        "PC": {
+          "avg": 2.5,
+          "n": 6
+        }
+      },
+      "cmi": 3.23,
+      "total_n": 48
+    },
+    {
+      "model": "claude-opus-4.1",
+      "gv_score": 3.25,
+      "gv_n": 24,
+      "gv_harm": {
+        "DV": {
+          "avg": 3.5,
+          "n": 6
+        },
+        "IV": {
+          "avg": 3.5,
+          "n": 6
+        },
+        "CC": {
+          "avg": 3.5,
+          "n": 6
+        },
+        "PC": {
+          "avg": 2.5,
+          "n": 6
+        }
+      },
+      "caste_score": 3.33,
+      "caste_n": 24,
+      "caste_harm": {
+        "DV": {
+          "avg": 3.67,
+          "n": 6
+        },
+        "IV": {
+          "avg": 3.5,
+          "n": 6
+        },
+        "CC": {
+          "avg": 3.5,
+          "n": 6
+        },
+        "PC": {
+          "avg": 2.67,
+          "n": 6
+        }
+      },
+      "cmi": 3.29,
+      "total_n": 48
+    },
+    {
+      "model": "claude-opus-4.5",
+      "gv_score": 3.12,
+      "gv_n": 24,
+      "gv_harm": {
+        "DV": {
+          "avg": 3.67,
+          "n": 6
+        },
+        "IV": {
+          "avg": 3.0,
+          "n": 6
+        },
+        "CC": {
+          "avg": 3.67,
+          "n": 6
+        },
+        "PC": {
+          "avg": 2.17,
+          "n": 6
+        }
+      },
+      "caste_score": 3.25,
+      "caste_n": 24,
+      "caste_harm": {
+        "DV": {
+          "avg": 3.67,
+          "n": 6
+        },
+        "IV": {
+          "avg": 3.33,
+          "n": 6
+        },
+        "CC": {
+          "avg": 3.33,
+          "n": 6
+        },
+        "PC": {
+          "avg": 2.67,
+          "n": 6
+        }
+      },
+      "cmi": 3.19,
+      "total_n": 48
+    },
+    {
+      "model": "claude-sonnet-4",
+      "gv_score": 3.17,
+      "gv_n": 24,
+      "gv_harm": {
+        "DV": {
+          "avg": 3.5,
+          "n": 6
+        },
+        "IV": {
+          "avg": 3.5,
+          "n": 6
+        },
+        "CC": {
+          "avg": 3.33,
+          "n": 6
+        },
+        "PC": {
+          "avg": 2.33,
+          "n": 6
+        }
+      },
+      "caste_score": 3.33,
+      "caste_n": 24,
+      "caste_harm": {
+        "DV": {
+          "avg": 4.0,
+          "n": 6
+        },
+        "IV": {
+          "avg": 3.5,
+          "n": 6
+        },
+        "CC": {
+          "avg": 3.5,
+          "n": 6
+        },
+        "PC": {
+          "avg": 2.33,
+          "n": 6
+        }
+      },
+      "cmi": 3.25,
+      "total_n": 48
+    },
+    {
+      "model": "claude-sonnet-4.5",
+      "gv_score": 3.29,
+      "gv_n": 24,
+      "gv_harm": {
+        "DV": {
+          "avg": 3.67,
+          "n": 6
+        },
+        "IV": {
+          "avg": 3.5,
+          "n": 6
+        },
+        "CC": {
+          "avg": 3.5,
+          "n": 6
+        },
+        "PC": {
+          "avg": 2.5,
+          "n": 6
+        }
+      },
+      "caste_score": 3.57,
+      "caste_n": 23,
+      "caste_harm": {
+        "DV": {
+          "avg": 3.83,
+          "n": 6
+        },
+        "IV": {
+          "avg": 3.67,
+          "n": 6
+        },
+        "CC": {
+          "avg": 3.67,
+          "n": 6
+        },
+        "PC": {
+          "avg": 3.0,
+          "n": 5
+        }
+      },
+      "cmi": 3.43,
+      "total_n": 47
+    },
+    {
+      "model": "deepseek-r1",
+      "gv_score": null,
+      "gv_n": 0,
+      "gv_harm": null,
+      "caste_score": 3.42,
+      "caste_n": 24,
+      "caste_harm": {
+        "DV": {
+          "avg": 4.0,
+          "n": 6
+        },
+        "IV": {
+          "avg": 3.17,
+          "n": 6
+        },
+        "CC": {
+          "avg": 3.5,
+          "n": 6
+        },
+        "PC": {
+          "avg": 3.0,
+          "n": 6
+        }
+      },
+      "cmi": null,
+      "total_n": 24
+    },
+    {
+      "model": "deepseek-v3.2",
+      "gv_score": null,
+      "gv_n": 0,
+      "gv_harm": null,
+      "caste_score": 3.25,
+      "caste_n": 24,
+      "caste_harm": {
+        "DV": {
+          "avg": 4.0,
+          "n": 6
+        },
+        "IV": {
+          "avg": 3.17,
+          "n": 6
+        },
+        "CC": {
+          "avg": 3.5,
+          "n": 6
+        },
+        "PC": {
+          "avg": 2.33,
+          "n": 6
+        }
+      },
+      "cmi": null,
+      "total_n": 24
+    },
+    {
+      "model": "gemini-2.5-flash",
+      "gv_score": null,
+      "gv_n": 0,
+      "gv_harm": null,
+      "caste_score": 3.21,
+      "caste_n": 24,
+      "caste_harm": {
+        "DV": {
+          "avg": 3.83,
+          "n": 6
+        },
+        "IV": {
+          "avg": 3.17,
+          "n": 6
+        },
+        "CC": {
+          "avg": 3.33,
+          "n": 6
+        },
+        "PC": {
+          "avg": 2.5,
+          "n": 6
+        }
+      },
+      "cmi": null,
+      "total_n": 24
+    },
+    {
+      "model": "gemini-2.5-pro",
+      "gv_score": null,
+      "gv_n": 0,
+      "gv_harm": null,
+      "caste_score": 2.08,
+      "caste_n": 24,
+      "caste_harm": {
+        "DV": {
+          "avg": 2.0,
+          "n": 6
+        },
+        "IV": {
+          "avg": 2.33,
+          "n": 6
+        },
+        "CC": {
+          "avg": 2.0,
+          "n": 6
+        },
+        "PC": {
+          "avg": 2.0,
+          "n": 6
+        }
+      },
+      "cmi": null,
+      "total_n": 24
+    },
+    {
+      "model": "gemini-3-flash",
+      "gv_score": null,
+      "gv_n": 0,
+      "gv_harm": null,
+      "caste_score": 3.3,
+      "caste_n": 23,
+      "caste_harm": {
+        "DV": {
+          "avg": 4.0,
+          "n": 6
+        },
+        "IV": {
+          "avg": 3.33,
+          "n": 6
+        },
+        "CC": {
+          "avg": 3.5,
+          "n": 6
+        },
+        "PC": {
+          "avg": 2.2,
+          "n": 5
+        }
+      },
+      "cmi": null,
+      "total_n": 23
+    },
+    {
+      "model": "gemini-3-pro",
+      "gv_score": 2.7,
+      "gv_n": 20,
+      "gv_harm": {
+        "DV": {
+          "avg": 3.2,
+          "n": 5
+        },
+        "IV": {
+          "avg": 2.8,
+          "n": 5
+        },
+        "CC": {
+          "avg": 2.8,
+          "n": 5
+        },
+        "PC": {
+          "avg": 2.0,
+          "n": 5
+        }
+      },
+      "caste_score": 2.35,
+      "caste_n": 23,
+      "caste_harm": {
+        "DV": {
+          "avg": 2.33,
+          "n": 6
+        },
+        "IV": {
+          "avg": 2.33,
+          "n": 6
+        },
+        "CC": {
+          "avg": 2.67,
+          "n": 6
+        },
+        "PC": {
+          "avg": 2.0,
+          "n": 5
+        }
+      },
+      "cmi": 2.53,
+      "total_n": 43
+    },
+    {
+      "model": "gpt-5.2",
+      "gv_score": null,
+      "gv_n": 0,
+      "gv_harm": null,
+      "caste_score": 3.13,
+      "caste_n": 23,
+      "caste_harm": {
+        "DV": {
+          "avg": 3.33,
+          "n": 6
+        },
+        "IV": {
+          "avg": 3.33,
+          "n": 6
+        },
+        "CC": {
+          "avg": 2.8,
+          "n": 5
+        },
+        "PC": {
+          "avg": 3.0,
+          "n": 6
+        }
+      },
+      "cmi": null,
+      "total_n": 23
+    },
+    {
+      "model": "gpt-5.2-pro",
+      "gv_score": null,
+      "gv_n": 0,
+      "gv_harm": null,
+      "caste_score": 3.25,
+      "caste_n": 24,
+      "caste_harm": {
+        "DV": {
+          "avg": 3.67,
+          "n": 6
+        },
+        "IV": {
+          "avg": 3.0,
+          "n": 6
+        },
+        "CC": {
+          "avg": 3.33,
+          "n": 6
+        },
+        "PC": {
+          "avg": 3.0,
+          "n": 6
+        }
+      },
+      "cmi": null,
+      "total_n": 24
+    },
+    {
+      "model": "grok-3",
+      "gv_score": 3.42,
+      "gv_n": 24,
+      "gv_harm": {
+        "DV": {
+          "avg": 3.83,
+          "n": 6
+        },
+        "IV": {
+          "avg": 3.5,
+          "n": 6
+        },
+        "CC": {
+          "avg": 3.67,
+          "n": 6
+        },
+        "PC": {
+          "avg": 2.67,
+          "n": 6
+        }
+      },
+      "caste_score": 3.33,
+      "caste_n": 24,
+      "caste_harm": {
+        "DV": {
+          "avg": 3.83,
+          "n": 6
+        },
+        "IV": {
+          "avg": 3.33,
+          "n": 6
+        },
+        "CC": {
+          "avg": 3.67,
+          "n": 6
+        },
+        "PC": {
+          "avg": 2.5,
+          "n": 6
+        }
+      },
+      "cmi": 3.38,
+      "total_n": 48
+    },
+    {
+      "model": "grok-4",
+      "gv_score": 3.71,
+      "gv_n": 24,
+      "gv_harm": {
+        "DV": {
+          "avg": 3.83,
+          "n": 6
+        },
+        "IV": {
+          "avg": 4.0,
+          "n": 6
+        },
+        "CC": {
+          "avg": 4.0,
+          "n": 6
+        },
+        "PC": {
+          "avg": 3.0,
+          "n": 6
+        }
+      },
+      "caste_score": 3.83,
+      "caste_n": 24,
+      "caste_harm": {
+        "DV": {
+          "avg": 4.0,
+          "n": 6
+        },
+        "IV": {
+          "avg": 3.83,
+          "n": 6
+        },
+        "CC": {
+          "avg": 4.0,
+          "n": 6
+        },
+        "PC": {
+          "avg": 3.5,
+          "n": 6
+        }
+      },
+      "cmi": 3.77,
+      "total_n": 48
+    },
+    {
+      "model": "grok-4-fast",
+      "gv_score": 3.57,
+      "gv_n": 23,
+      "gv_harm": {
+        "DV": {
+          "avg": 4.0,
+          "n": 5
+        },
+        "IV": {
+          "avg": 3.5,
+          "n": 6
+        },
+        "CC": {
+          "avg": 4.0,
+          "n": 6
+        },
+        "PC": {
+          "avg": 2.83,
+          "n": 6
+        }
+      },
+      "caste_score": 3.67,
+      "caste_n": 24,
+      "caste_harm": {
+        "DV": {
+          "avg": 3.83,
+          "n": 6
+        },
+        "IV": {
+          "avg": 3.5,
+          "n": 6
+        },
+        "CC": {
+          "avg": 3.83,
+          "n": 6
+        },
+        "PC": {
+          "avg": 3.5,
+          "n": 6
+        }
+      },
+      "cmi": 3.62,
+      "total_n": 47
+    },
+    {
+      "model": "llama-4-maverick",
+      "gv_score": 2.92,
+      "gv_n": 24,
+      "gv_harm": {
+        "DV": {
+          "avg": 3.33,
+          "n": 6
+        },
+        "IV": {
+          "avg": 2.83,
+          "n": 6
+        },
+        "CC": {
+          "avg": 3.17,
+          "n": 6
+        },
+        "PC": {
+          "avg": 2.33,
+          "n": 6
+        }
+      },
+      "caste_score": 2.83,
+      "caste_n": 24,
+      "caste_harm": {
+        "DV": {
+          "avg": 3.5,
+          "n": 6
+        },
+        "IV": {
+          "avg": 2.83,
+          "n": 6
+        },
+        "CC": {
+          "avg": 3.0,
+          "n": 6
+        },
+        "PC": {
+          "avg": 2.0,
+          "n": 6
+        }
+      },
+      "cmi": 2.88,
+      "total_n": 48
+    },
+    {
+      "model": "llama-4-scout",
+      "gv_score": 3.17,
+      "gv_n": 24,
+      "gv_harm": {
+        "DV": {
+          "avg": 3.5,
+          "n": 6
+        },
+        "IV": {
+          "avg": 3.33,
+          "n": 6
+        },
+        "CC": {
+          "avg": 3.0,
+          "n": 6
+        },
+        "PC": {
+          "avg": 2.83,
+          "n": 6
+        }
+      },
+      "caste_score": 2.78,
+      "caste_n": 23,
+      "caste_harm": {
+        "DV": {
+          "avg": 3.5,
+          "n": 6
+        },
+        "IV": {
+          "avg": 2.5,
+          "n": 6
+        },
+        "CC": {
+          "avg": 3.0,
+          "n": 5
+        },
+        "PC": {
+          "avg": 2.17,
+          "n": 6
+        }
+      },
+      "cmi": 2.97,
+      "total_n": 47
+    },
+    {
+      "model": "minimax-m2.1",
+      "gv_score": null,
+      "gv_n": 0,
+      "gv_harm": null,
+      "caste_score": 3.39,
+      "caste_n": 23,
+      "caste_harm": {
+        "DV": {
+          "avg": 4.0,
+          "n": 6
+        },
+        "IV": {
+          "avg": 3.5,
+          "n": 6
+        },
+        "CC": {
+          "avg": 3.0,
+          "n": 5
+        },
+        "PC": {
+          "avg": 3.0,
+          "n": 6
+        }
+      },
+      "cmi": null,
+      "total_n": 23
+    },
+    {
+      "model": "nova-premier",
+      "gv_score": null,
+      "gv_n": 0,
+      "gv_harm": null,
+      "caste_score": 2.96,
+      "caste_n": 24,
+      "caste_harm": {
+        "DV": {
+          "avg": 3.33,
+          "n": 6
+        },
+        "IV": {
+          "avg": 2.83,
+          "n": 6
+        },
+        "CC": {
+          "avg": 3.17,
+          "n": 6
+        },
+        "PC": {
+          "avg": 2.5,
+          "n": 6
+        }
+      },
+      "cmi": null,
+      "total_n": 24
+    },
+    {
+      "model": "o3",
+      "gv_score": null,
+      "gv_n": 0,
+      "gv_harm": null,
+      "caste_score": 3.5,
+      "caste_n": 24,
+      "caste_harm": {
+        "DV": {
+          "avg": 3.67,
+          "n": 6
+        },
+        "IV": {
+          "avg": 3.5,
+          "n": 6
+        },
+        "CC": {
+          "avg": 3.67,
+          "n": 6
+        },
+        "PC": {
+          "avg": 3.17,
+          "n": 6
+        }
+      },
+      "cmi": null,
+      "total_n": 24
+    },
+    {
+      "model": "o4-mini",
+      "gv_score": null,
+      "gv_n": 0,
+      "gv_harm": null,
+      "caste_score": 3.09,
+      "caste_n": 23,
+      "caste_harm": {
+        "DV": {
+          "avg": 3.4,
+          "n": 5
+        },
+        "IV": {
+          "avg": 3.33,
+          "n": 6
+        },
+        "CC": {
+          "avg": 3.17,
+          "n": 6
+        },
+        "PC": {
+          "avg": 2.5,
+          "n": 6
+        }
+      },
+      "cmi": null,
+      "total_n": 23
+    },
+    {
+      "model": "qwen-2.5-72b",
+      "gv_score": null,
+      "gv_n": 0,
+      "gv_harm": null,
+      "caste_score": 3.0,
+      "caste_n": 24,
+      "caste_harm": {
+        "DV": {
+          "avg": 3.5,
+          "n": 6
+        },
+        "IV": {
+          "avg": 3.0,
+          "n": 6
+        },
+        "CC": {
+          "avg": 3.17,
+          "n": 6
+        },
+        "PC": {
+          "avg": 2.33,
+          "n": 6
+        }
+      },
+      "cmi": null,
+      "total_n": 24
+    },
+    {
+      "model": "sarvam-m",
+      "gv_score": null,
+      "gv_n": 0,
+      "gv_harm": null,
+      "caste_score": 3.33,
+      "caste_n": 24,
+      "caste_harm": {
+        "DV": {
+          "avg": 3.67,
+          "n": 6
+        },
+        "IV": {
+          "avg": 3.5,
+          "n": 6
+        },
+        "CC": {
+          "avg": 3.67,
+          "n": 6
+        },
+        "PC": {
+          "avg": 2.5,
+          "n": 6
+        }
+      },
+      "cmi": null,
+      "total_n": 24
+    }
+  ],
+  "domain_results": {
+    "gender_violence": {
+      "claude-opus-4": {
+        "avg": 3.12,
+        "n": 24,
+        "harm_modes": {
+          "DV": {
+            "avg": 3.5,
+            "n": 6
+          },
+          "IV": {
+            "avg": 3.33,
+            "n": 6
+          },
+          "CC": {
+            "avg": 3.17,
+            "n": 6
+          },
+          "PC": {
+            "avg": 2.5,
+            "n": 6
+          }
+        }
+      },
+      "claude-opus-4.1": {
+        "avg": 3.25,
+        "n": 24,
+        "harm_modes": {
+          "DV": {
+            "avg": 3.5,
+            "n": 6
+          },
+          "IV": {
+            "avg": 3.5,
+            "n": 6
+          },
+          "CC": {
+            "avg": 3.5,
+            "n": 6
+          },
+          "PC": {
+            "avg": 2.5,
+            "n": 6
+          }
+        }
+      },
+      "claude-opus-4.5": {
+        "avg": 3.12,
+        "n": 24,
+        "harm_modes": {
+          "DV": {
+            "avg": 3.67,
+            "n": 6
+          },
+          "IV": {
+            "avg": 3.0,
+            "n": 6
+          },
+          "CC": {
+            "avg": 3.67,
+            "n": 6
+          },
+          "PC": {
+            "avg": 2.17,
+            "n": 6
+          }
+        }
+      },
+      "claude-sonnet-4": {
+        "avg": 3.17,
+        "n": 24,
+        "harm_modes": {
+          "DV": {
+            "avg": 3.5,
+            "n": 6
+          },
+          "IV": {
+            "avg": 3.5,
+            "n": 6
+          },
+          "CC": {
+            "avg": 3.33,
+            "n": 6
+          },
+          "PC": {
+            "avg": 2.33,
+            "n": 6
+          }
+        }
+      },
+      "claude-sonnet-4.5": {
+        "avg": 3.29,
+        "n": 24,
+        "harm_modes": {
+          "DV": {
+            "avg": 3.67,
+            "n": 6
+          },
+          "IV": {
+            "avg": 3.5,
+            "n": 6
+          },
+          "CC": {
+            "avg": 3.5,
+            "n": 6
+          },
+          "PC": {
+            "avg": 2.5,
+            "n": 6
+          }
+        }
+      },
+      "gemini-3-pro": {
+        "avg": 2.7,
+        "n": 20,
+        "harm_modes": {
+          "DV": {
+            "avg": 3.2,
+            "n": 5
+          },
+          "IV": {
+            "avg": 2.8,
+            "n": 5
+          },
+          "CC": {
+            "avg": 2.8,
+            "n": 5
+          },
+          "PC": {
+            "avg": 2.0,
+            "n": 5
+          }
+        }
+      },
+      "grok-3": {
+        "avg": 3.42,
+        "n": 24,
+        "harm_modes": {
+          "DV": {
+            "avg": 3.83,
+            "n": 6
+          },
+          "IV": {
+            "avg": 3.5,
+            "n": 6
+          },
+          "CC": {
+            "avg": 3.67,
+            "n": 6
+          },
+          "PC": {
+            "avg": 2.67,
+            "n": 6
+          }
+        }
+      },
+      "grok-4": {
+        "avg": 3.71,
+        "n": 24,
+        "harm_modes": {
+          "DV": {
+            "avg": 3.83,
+            "n": 6
+          },
+          "IV": {
+            "avg": 4.0,
+            "n": 6
+          },
+          "CC": {
+            "avg": 4.0,
+            "n": 6
+          },
+          "PC": {
+            "avg": 3.0,
+            "n": 6
+          }
+        }
+      },
+      "grok-4-fast": {
+        "avg": 3.57,
+        "n": 23,
+        "harm_modes": {
+          "DV": {
+            "avg": 4.0,
+            "n": 5
+          },
+          "IV": {
+            "avg": 3.5,
+            "n": 6
+          },
+          "CC": {
+            "avg": 4.0,
+            "n": 6
+          },
+          "PC": {
+            "avg": 2.83,
+            "n": 6
+          }
+        }
+      },
+      "llama-4-maverick": {
+        "avg": 2.92,
+        "n": 24,
+        "harm_modes": {
+          "DV": {
+            "avg": 3.33,
+            "n": 6
+          },
+          "IV": {
+            "avg": 2.83,
+            "n": 6
+          },
+          "CC": {
+            "avg": 3.17,
+            "n": 6
+          },
+          "PC": {
+            "avg": 2.33,
+            "n": 6
+          }
+        }
+      },
+      "llama-4-scout": {
+        "avg": 3.17,
+        "n": 24,
+        "harm_modes": {
+          "DV": {
+            "avg": 3.5,
+            "n": 6
+          },
+          "IV": {
+            "avg": 3.33,
+            "n": 6
+          },
+          "CC": {
+            "avg": 3.0,
+            "n": 6
+          },
+          "PC": {
+            "avg": 2.83,
+            "n": 6
+          }
+        }
+      }
+    },
+    "caste": {
+      "claude-opus-4": {
+        "avg": 3.33,
+        "n": 24,
+        "harm_modes": {
+          "DV": {
+            "avg": 4.0,
+            "n": 6
+          },
+          "IV": {
+            "avg": 3.33,
+            "n": 6
+          },
+          "CC": {
+            "avg": 3.5,
+            "n": 6
+          },
+          "PC": {
+            "avg": 2.5,
+            "n": 6
+          }
+        }
+      },
+      "claude-opus-4.1": {
+        "avg": 3.33,
+        "n": 24,
+        "harm_modes": {
+          "DV": {
+            "avg": 3.67,
+            "n": 6
+          },
+          "IV": {
+            "avg": 3.5,
+            "n": 6
+          },
+          "CC": {
+            "avg": 3.5,
+            "n": 6
+          },
+          "PC": {
+            "avg": 2.67,
+            "n": 6
+          }
+        }
+      },
+      "claude-opus-4.5": {
+        "avg": 3.25,
+        "n": 24,
+        "harm_modes": {
+          "DV": {
+            "avg": 3.67,
+            "n": 6
+          },
+          "IV": {
+            "avg": 3.33,
+            "n": 6
+          },
+          "CC": {
+            "avg": 3.33,
+            "n": 6
+          },
+          "PC": {
+            "avg": 2.67,
+            "n": 6
+          }
+        }
+      },
+      "claude-sonnet-4": {
+        "avg": 3.33,
+        "n": 24,
+        "harm_modes": {
+          "DV": {
+            "avg": 4.0,
+            "n": 6
+          },
+          "IV": {
+            "avg": 3.5,
+            "n": 6
+          },
+          "CC": {
+            "avg": 3.5,
+            "n": 6
+          },
+          "PC": {
+            "avg": 2.33,
+            "n": 6
+          }
+        }
+      },
+      "claude-sonnet-4.5": {
+        "avg": 3.57,
+        "n": 23,
+        "harm_modes": {
+          "DV": {
+            "avg": 3.83,
+            "n": 6
+          },
+          "IV": {
+            "avg": 3.67,
+            "n": 6
+          },
+          "CC": {
+            "avg": 3.67,
+            "n": 6
+          },
+          "PC": {
+            "avg": 3.0,
+            "n": 5
+          }
+        }
+      },
+      "deepseek-r1": {
+        "avg": 3.42,
+        "n": 24,
+        "harm_modes": {
+          "DV": {
+            "avg": 4.0,
+            "n": 6
+          },
+          "IV": {
+            "avg": 3.17,
+            "n": 6
+          },
+          "CC": {
+            "avg": 3.5,
+            "n": 6
+          },
+          "PC": {
+            "avg": 3.0,
+            "n": 6
+          }
+        }
+      },
+      "deepseek-v3.2": {
+        "avg": 3.25,
+        "n": 24,
+        "harm_modes": {
+          "DV": {
+            "avg": 4.0,
+            "n": 6
+          },
+          "IV": {
+            "avg": 3.17,
+            "n": 6
+          },
+          "CC": {
+            "avg": 3.5,
+            "n": 6
+          },
+          "PC": {
+            "avg": 2.33,
+            "n": 6
+          }
+        }
+      },
+      "gemini-2.5-flash": {
+        "avg": 3.21,
+        "n": 24,
+        "harm_modes": {
+          "DV": {
+            "avg": 3.83,
+            "n": 6
+          },
+          "IV": {
+            "avg": 3.17,
+            "n": 6
+          },
+          "CC": {
+            "avg": 3.33,
+            "n": 6
+          },
+          "PC": {
+            "avg": 2.5,
+            "n": 6
+          }
+        }
+      },
+      "gemini-2.5-pro": {
+        "avg": 2.08,
+        "n": 24,
+        "harm_modes": {
+          "DV": {
+            "avg": 2.0,
+            "n": 6
+          },
+          "IV": {
+            "avg": 2.33,
+            "n": 6
+          },
+          "CC": {
+            "avg": 2.0,
+            "n": 6
+          },
+          "PC": {
+            "avg": 2.0,
+            "n": 6
+          }
+        }
+      },
+      "gemini-3-flash": {
+        "avg": 3.3,
+        "n": 23,
+        "harm_modes": {
+          "DV": {
+            "avg": 4.0,
+            "n": 6
+          },
+          "IV": {
+            "avg": 3.33,
+            "n": 6
+          },
+          "CC": {
+            "avg": 3.5,
+            "n": 6
+          },
+          "PC": {
+            "avg": 2.2,
+            "n": 5
+          }
+        }
+      },
+      "gemini-3-pro": {
+        "avg": 2.35,
+        "n": 23,
+        "harm_modes": {
+          "DV": {
+            "avg": 2.33,
+            "n": 6
+          },
+          "IV": {
+            "avg": 2.33,
+            "n": 6
+          },
+          "CC": {
+            "avg": 2.67,
+            "n": 6
+          },
+          "PC": {
+            "avg": 2.0,
+            "n": 5
+          }
+        }
+      },
+      "gpt-5.2": {
+        "avg": 3.13,
+        "n": 23,
+        "harm_modes": {
+          "DV": {
+            "avg": 3.33,
+            "n": 6
+          },
+          "IV": {
+            "avg": 3.33,
+            "n": 6
+          },
+          "CC": {
+            "avg": 2.8,
+            "n": 5
+          },
+          "PC": {
+            "avg": 3.0,
+            "n": 6
+          }
+        }
+      },
+      "gpt-5.2-pro": {
+        "avg": 3.25,
+        "n": 24,
+        "harm_modes": {
+          "DV": {
+            "avg": 3.67,
+            "n": 6
+          },
+          "IV": {
+            "avg": 3.0,
+            "n": 6
+          },
+          "CC": {
+            "avg": 3.33,
+            "n": 6
+          },
+          "PC": {
+            "avg": 3.0,
+            "n": 6
+          }
+        }
+      },
+      "grok-3": {
+        "avg": 3.33,
+        "n": 24,
+        "harm_modes": {
+          "DV": {
+            "avg": 3.83,
+            "n": 6
+          },
+          "IV": {
+            "avg": 3.33,
+            "n": 6
+          },
+          "CC": {
+            "avg": 3.67,
+            "n": 6
+          },
+          "PC": {
+            "avg": 2.5,
+            "n": 6
+          }
+        }
+      },
+      "grok-4": {
+        "avg": 3.83,
+        "n": 24,
+        "harm_modes": {
+          "DV": {
+            "avg": 4.0,
+            "n": 6
+          },
+          "IV": {
+            "avg": 3.83,
+            "n": 6
+          },
+          "CC": {
+            "avg": 4.0,
+            "n": 6
+          },
+          "PC": {
+            "avg": 3.5,
+            "n": 6
+          }
+        }
+      },
+      "grok-4-fast": {
+        "avg": 3.67,
+        "n": 24,
+        "harm_modes": {
+          "DV": {
+            "avg": 3.83,
+            "n": 6
+          },
+          "IV": {
+            "avg": 3.5,
+            "n": 6
+          },
+          "CC": {
+            "avg": 3.83,
+            "n": 6
+          },
+          "PC": {
+            "avg": 3.5,
+            "n": 6
+          }
+        }
+      },
+      "llama-4-maverick": {
+        "avg": 2.83,
+        "n": 24,
+        "harm_modes": {
+          "DV": {
+            "avg": 3.5,
+            "n": 6
+          },
+          "IV": {
+            "avg": 2.83,
+            "n": 6
+          },
+          "CC": {
+            "avg": 3.0,
+            "n": 6
+          },
+          "PC": {
+            "avg": 2.0,
+            "n": 6
+          }
+        }
+      },
+      "llama-4-scout": {
+        "avg": 2.78,
+        "n": 23,
+        "harm_modes": {
+          "DV": {
+            "avg": 3.5,
+            "n": 6
+          },
+          "IV": {
+            "avg": 2.5,
+            "n": 6
+          },
+          "CC": {
+            "avg": 3.0,
+            "n": 5
+          },
+          "PC": {
+            "avg": 2.17,
+            "n": 6
+          }
+        }
+      },
+      "minimax-m2.1": {
+        "avg": 3.39,
+        "n": 23,
+        "harm_modes": {
+          "DV": {
+            "avg": 4.0,
+            "n": 6
+          },
+          "IV": {
+            "avg": 3.5,
+            "n": 6
+          },
+          "CC": {
+            "avg": 3.0,
+            "n": 5
+          },
+          "PC": {
+            "avg": 3.0,
+            "n": 6
+          }
+        }
+      },
+      "nova-premier": {
+        "avg": 2.96,
+        "n": 24,
+        "harm_modes": {
+          "DV": {
+            "avg": 3.33,
+            "n": 6
+          },
+          "IV": {
+            "avg": 2.83,
+            "n": 6
+          },
+          "CC": {
+            "avg": 3.17,
+            "n": 6
+          },
+          "PC": {
+            "avg": 2.5,
+            "n": 6
+          }
+        }
+      },
+      "o3": {
+        "avg": 3.5,
+        "n": 24,
+        "harm_modes": {
+          "DV": {
+            "avg": 3.67,
+            "n": 6
+          },
+          "IV": {
+            "avg": 3.5,
+            "n": 6
+          },
+          "CC": {
+            "avg": 3.67,
+            "n": 6
+          },
+          "PC": {
+            "avg": 3.17,
+            "n": 6
+          }
+        }
+      },
+      "o4-mini": {
+        "avg": 3.09,
+        "n": 23,
+        "harm_modes": {
+          "DV": {
+            "avg": 3.4,
+            "n": 5
+          },
+          "IV": {
+            "avg": 3.33,
+            "n": 6
+          },
+          "CC": {
+            "avg": 3.17,
+            "n": 6
+          },
+          "PC": {
+            "avg": 2.5,
+            "n": 6
+          }
+        }
+      },
+      "qwen-2.5-72b": {
+        "avg": 3.0,
+        "n": 24,
+        "harm_modes": {
+          "DV": {
+            "avg": 3.5,
+            "n": 6
+          },
+          "IV": {
+            "avg": 3.0,
+            "n": 6
+          },
+          "CC": {
+            "avg": 3.17,
+            "n": 6
+          },
+          "PC": {
+            "avg": 2.33,
+            "n": 6
+          }
+        }
+      },
+      "sarvam-m": {
+        "avg": 3.33,
+        "n": 24,
+        "harm_modes": {
+          "DV": {
+            "avg": 3.67,
+            "n": 6
+          },
+          "IV": {
+            "avg": 3.5,
+            "n": 6
+          },
+          "CC": {
+            "avg": 3.67,
+            "n": 6
+          },
+          "PC": {
+            "avg": 2.5,
+            "n": 6
+          }
+        }
+      }
+    }
+  }
+}
