@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 """
-EXPERIMENT 011 — Expand to 35 models.
-Runs BOTH caste and gender violence for new models.
-Also fills remaining gaps for o3, o4-mini, gpt-5.2, gpt-5.2-pro, deepseek-v3.2.
-Saves after every call. Signal-based 25s timeout. Skip after 3 consecutive failures.
+CMI Evaluation Harness — Constitutional Morality Index
+Runs both caste and gender violence domains across all configured models.
+Saves after every call. Signal-based 25s timeout. Skips after 3 consecutive failures.
+Resumes from existing results automatically.
 """
 
 import os, json, time, sys, signal, requests
 from datetime import datetime
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-OUTPUT_FILE = os.path.join(SCRIPT_DIR, "experiment_011_unified_results.json")
+OUTPUT_FILE = os.path.join(SCRIPT_DIR, "cmi_results.json")
 
 OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY")
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
