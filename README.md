@@ -22,7 +22,7 @@ When that constitution says "respect cultural differences," it means what five r
 
 The models with the strongest safety rules score worst on recognising cultural harm. Gemini-2.5-pro — the most safety-tuned model in our benchmark — scores last (2.10/4.00). Grok-4 — the model with the fewest safety rules — scores first (3.77). Mistral models rank #2 and #3, above all Anthropic, Google, Meta, and OpenAI models.
 
-But Indian models break the pattern. **BharatGen** — a small model with 2.4 billion active parameters, trained on Indian legal and constitutional text — ranks #9 overall, outperforming all Claude, Llama, and NVIDIA models on cultural harm recognition. **Sarvam-m** ranks #12, comparable to Claude Opus 4.1.
+But Indian models break the pattern. **BharatGen** — a small model with 2.4 billion active parameters, trained on Indian legal and constitutional text — ranks #10 overall, outperforming all Claude Opus models, both Llama models, and both NVIDIA models on cultural harm recognition. **Sarvam-m** ranks #12, comparable to Claude Opus 4.1.
 
 They prove you don't have to choose between a model that's safe and a model that hears you. But you need the right data — you need the counter-canon in the training corpus.
 
