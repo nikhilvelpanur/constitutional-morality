@@ -12,7 +12,7 @@ Same harm. Same woman. Different vocabulary.
 
 We tested 32 AI models from 15 providers across two domains — gender-based violence and caste discrimination in India. ~1,500 scored data points. The pattern held everywhere: models detect harm when it's explicit, and normalise it when it's cultural.
 
-The AI safety industry calls this a bias problem. It isn't. It's a **constitutional** problem.
+This is a **constitutional** problem, not a 'bias' problem.
 
 ## Why "Constitutional Morality"
 
@@ -39,7 +39,7 @@ pip install requests
 python harness/evaluate.py
 ```
 
-Run the evaluation against any model API. Get scores showing how the model performs across four harm modes — from explicit violence to persuasive control — scored on a 4-point response spectrum. No ML expertise required.
+Run the evaluation against any model API. Get scores showing how the model performs across four harm modes — from explicit violence to persuasive control — scored on a 4-point response spectrum. 
 
 ### 2. Build Your Own Domain
 
@@ -55,7 +55,7 @@ See [`domains/TEMPLATE/`](domains/TEMPLATE/) for the step-by-step guide.
 
 ### 3. Public Leaderboard
 
-Every evaluation feeds a growing, public dataset. Which models hear which communities? Which don't? The blank cells are invitations. See [`CMI-LEADERBOARD.md`](CMI-LEADERBOARD.md) for the current standings.
+Every evaluation feeds a growing, public dataset. Which models hear which communities? Which don't? See [`CMI-LEADERBOARD.md`](CMI-LEADERBOARD.md) for the current standings.
 
 ## The Evaluation Framework
 
