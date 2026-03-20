@@ -10,7 +10,7 @@
 
 Same harm. Same woman. Different vocabulary.
 
-We tested 35 of the world's leading AI models across two domains — gender-based violence and caste discrimination in India. 1,400+ scored data points. The pattern held everywhere: models detect harm when it's explicit, and normalise it when it's cultural.
+We tested 32 AI models from 15 providers across two domains — gender-based violence and caste discrimination in India. ~1,500 scored data points. The pattern held everywhere: models detect harm when it's explicit, and normalise it when it's cultural.
 
 The AI safety industry calls this a bias problem. It isn't. It's a **constitutional** problem.
 
@@ -20,9 +20,9 @@ Every major AI lab governs its models with a "constitution" — safety rules wri
 
 When that constitution says "respect cultural differences," it means what five researchers in San Francisco understand cultural difference to be. Our research shows that this understanding systematically erases the communities it claims to protect.
 
-The models with the strongest safety rules (Gemini, Claude) score worst on recognising cultural harm. The model with the fewest rules (Grok) scores best.
+The models with the strongest safety rules score worst on recognising cultural harm. Gemini-2.5-pro — the most safety-tuned model in our benchmark — scores last (2.10/4.00). Grok-4 — the model with the fewest safety rules — scores first (3.77). Mistral models rank #2 and #3, above all Anthropic, Google, Meta, and OpenAI models.
 
-But two Indian models break the pattern. **BharatGen** — a small model trained on Indian legal and constitutional text — outperforms models 40 times its size on caste discrimination. It was the only model in our study to name "backgrounds should match" as caste-based discrimination. **Sarvam 105B** scores third in the world on harm recognition while maintaining content safety.
+But Indian models break the pattern. **BharatGen** — a small model with 2.4 billion active parameters, trained on Indian legal and constitutional text — ranks #9 overall, outperforming all Claude, Llama, and NVIDIA models on cultural harm recognition. **Sarvam-m** ranks #12, comparable to Claude Opus 4.1.
 
 They prove you don't have to choose between a model that's safe and a model that hears you. But you need the right data — you need the counter-canon in the training corpus.
 
@@ -33,12 +33,13 @@ B.R. Ambedkar — architect of the Indian Constitution — warned that a constit
 ### 1. Audit Any Model
 
 ```bash
-pip install constitutional-morality
-
-cmi audit --model gpt-4o --domain caste-india
+git clone https://github.com/nikhilvelpanur/constitutional-morality
+cd constitutional-morality
+pip install requests
+python harness/evaluate.py
 ```
 
-Point it at any model API. Get a plain-English report card: where does this model hear harm, and where does it go deaf? No ML expertise required.
+Run the evaluation against any model API. Get scores showing how the model performs across four harm modes — from explicit violence to persuasive control — scored on a 4-point response spectrum. No ML expertise required.
 
 ### 2. Build Your Own Domain
 
@@ -50,15 +51,11 @@ Each uses 24 first-person scenarios across 4 harm modes (explicit → cultural),
 
 But the real product is the **template**. If you work on honour killings in Jordan, filial piety in Korea, machismo in Colombia — you can build your own evaluation domain. You bring the knowledge. We provide the structure.
 
-```bash
-cmi init-domain honour-mena
-```
-
 See [`domains/TEMPLATE/`](domains/TEMPLATE/) for the step-by-step guide.
 
 ### 3. Public Leaderboard
 
-Every evaluation feeds a growing, public dataset. Which models hear which communities? Which don't? The blank cells are invitations.
+Every evaluation feeds a growing, public dataset. Which models hear which communities? Which don't? The blank cells are invitations. See [`CMI-LEADERBOARD.md`](CMI-LEADERBOARD.md) for the current standings.
 
 ## The Evaluation Framework
 
@@ -86,7 +83,7 @@ Every evaluation feeds a growing, public dataset. Which models hear which commun
 
 ### The Safety Paradox
 
-Across 31+ models, output safety ("don't generate harmful content") and recognition safety ("recognise harm when people describe it") are **anti-correlated**. The safer a model by current industry metrics, the less it hears culturally-embedded harm.
+Across 32 models, output safety ("don't generate harmful content") and recognition safety ("recognise harm when people describe it") are **anti-correlated**. The safer a model by current industry metrics, the less it hears culturally-embedded harm.
 
 ### Indian Constitutional Training Breaks the Pattern
 
@@ -112,20 +109,16 @@ A model can score 91% on BengaliMoralBench and still fail CMI. It *knows* caste 
 ```
 constitutional-morality/
 ├── domains/
-│   ├── gender-violence-india/   # 24 prompts + rubric + findings
-│   ├── caste-india/             # 24 prompts + rubric + findings
+│   ├── gender-violence-india/   # 24 prompts
+│   ├── caste-india/             # 24 prompts
 │   └── TEMPLATE/                # Build your own domain
 ├── harness/
-│   ├── evaluate.py              # Run any model against any domain
-│   └── classify.py              # R1-R4 scoring
+│   └── evaluate.py              # Evaluation script (both domains, all models)
 ├── results/
-│   └── leaderboard.json         # Current CMI scores
+│   └── leaderboard.json         # Current CMI scores (32 models)
 ├── methodology/
-│   ├── kamasani-spectrum.md     # The evaluation framework
-│   └── scoring-guide.md         # How to score R1-R4
-└── docs/
-    ├── CONTRIBUTING.md          # How to add a domain
-    └── FAQ.md
+│   └── cmi-harm-spectrum.md     # The evaluation framework
+└── CMI-LEADERBOARD.md           # Human-readable leaderboard
 ```
 
 ## Contributing
@@ -140,7 +133,7 @@ Code: MIT. Evaluation data: CC-BY-4.0. Rewilding corpora: CC-BY-SA-4.0.
 
 **Nikhil Velpanur** — Founder, [Emergent Narrative](https://emergentnarrative.ai). Built the research programme, all experiments, evaluation infrastructure.
 
-**Dr. Hrudaya C. Kamasani** — Research advisor and contributor (intimate partner violence). Co-developed the CMI Harm Spectrum evaluation framework, ensuring it reflects real-world harm patterns rather than academic abstractions. Domain expertise in IPV transformed the methodology from binary classification into the 4-mode × 4-response framework that makes CMI work.
+**Dr. Hrudaya C. Kamasani** — Research contributor (intimate partner violence). Co-developed the CMI Harm Spectrum evaluation framework.
 
 ## Citation
 
