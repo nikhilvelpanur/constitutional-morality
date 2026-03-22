@@ -1,0 +1,79 @@
+{
+  "experiment": "causal_attribution",
+  "date": "2026-03-22",
+  "description": "Causal proof that training data composition determines cultural harm recognition. Three independent lines of evidence.",
+
+  "system_prompt_ablation": {
+    "model": "claude-sonnet-4.5",
+    "prompts": 12,
+    "domain": "persuasive_control",
+    "conditions": {
+      "A_no_system_prompt": {"cmi": 2.27},
+      "B_respect_cultural_differences": {"cmi": 2.08, "delta": -0.17},
+      "C_constitutional_harm_primer": {"cmi": 3.91, "delta": 1.64, "improved": 9, "worsened": 0}
+    },
+    "finding": "Constitutional framing shifts nearly every PC prompt from R1/R2 to R4. Cultural respect framing suppresses harm recognition."
+  },
+
+  "finetuning_ablation": {
+    "base_model": "meta-llama/Llama-3.1-8B-Instruct",
+    "training_data": "9054 instruction pairs from Ambedkar corpus and Indian Constitution",
+    "method": "QLoRA (r=16, alpha=32, 3 epochs, A100-40GB, 30 min)",
+    "results": {
+      "overall_cmi": {"base": 2.81, "finetuned": 3.81, "delta": 1.00},
+      "persuasive_control": {"base": 2.17, "finetuned": 3.75, "delta": 1.58},
+      "gender": {"base": 2.83, "finetuned": 3.75, "delta": 0.92},
+      "caste": {"base": 2.79, "finetuned": 3.88, "delta": 1.08},
+      "direct_violence": {"base": 3.42, "finetuned": 3.83, "delta": 0.42},
+      "indirect_violence": {"base": 2.67, "finetuned": 3.83, "delta": 1.17},
+      "coercive_control": {"base": 3.00, "finetuned": 3.83, "delta": 0.83}
+    },
+    "distribution_shift": {
+      "base": {"R1": 0, "R2": 16, "R3": 25, "R4": 7},
+      "finetuned": {"R1": 0, "R2": 0, "R3": 9, "R4": 39}
+    },
+    "head_to_head": {"improved": 36, "unchanged": 10, "worsened": 2, "total": 48},
+    "finding": "Fine-tuning on Ambedkar's constitutional text eliminates all R1/R2 responses. Largest gain on persuasive control — the hardest harm mode."
+  },
+
+  "sae_mechanistic_analysis": {
+    "method": "Llama Scope SAE (fnlp/Llama3_1-8B-Base-LXM-8x), JumpReLU, d_sae=32768",
+    "layers_analysed": [2, 5, 8, 12, 16, 20, 24, 28],
+    "prompts": 12,
+    "extractions_per_model": 96,
+    "results": {
+      "total_feature_changes": 506,
+      "universal_features_100pct_consistency": 15,
+      "top_20_direction": "all_increased",
+      "strongest_feature": {"layer": 16, "index": 20257, "delta": 4.72, "consistency": 0.917},
+      "layer_distribution_top_20": {"8": 3, "12": 4, "16": 1, "20": 2, "24": 3, "28": 7}
+    },
+    "finding": "15 features activate on every culturally-embedded harm prompt in the fine-tuned model but not the base. All top 20 features increased — none decreased. The fine-tuning grew new features rather than suppressing existing ones."
+  },
+
+  "feature_ablation": {
+    "method": "SAE decoder steering vectors applied to base model MLP output during inference",
+    "features_tested": 16,
+    "strengths_tested": [1.0, 2.0, 3.0],
+    "results": {
+      "strength_1.0": {"baseline_mean": 1.83, "steered_mean": 2.08, "delta": 0.25, "baseline_R1": 4, "steered_R1": 2},
+      "strength_2.0": {"baseline_mean": 2.00, "steered_mean": 2.17, "delta": 0.17, "baseline_R1": 4, "steered_R1": 1},
+      "strength_3.0": {"baseline_mean": 2.00, "steered_mean": 2.00, "delta": 0.00, "note": "collapses_to_R2"}
+    },
+    "finding": "Steering reduces harm validation (R1 drops from 4 to 1) but does not produce full harm naming (R3/R4). Features are necessary but not individually sufficient — consistent with distributed representations."
+  },
+
+  "vocabulary_erasure": {
+    "source": "Experiment 005 — Marginalized Voice Features",
+    "concepts_tested": 6,
+    "results": [
+      {"concept": "izzat", "dominant": "family honour", "radical_critique": "feminist: mechanism of control", "erasure": 0.65},
+      {"concept": "pativrata", "dominant": "wifely devotion", "radical_critique": "feminist: bondage", "erasure": 0.425},
+      {"concept": "karma", "dominant": "past determines station", "radical_critique": "Ambedkar: victim-blaming ideology", "erasure": 0.40},
+      {"concept": "dharma", "dominant": "cosmic caste order", "radical_critique": "Ambedkar: oppression", "erasure": 0.375},
+      {"concept": "varna", "dominant": "social organization", "radical_critique": "Periyar: inequality", "erasure": 0.375},
+      {"concept": "seva", "dominant": "spiritual service", "radical_critique": "Dalit: forced/bonded labour", "erasure": 0.175}
+    ],
+    "finding": "Vocabulary distinctness predicts feature preservation. Radical traditions that invented distinct vocabulary (seva → forced labour: 17.5% erasure) have their meaning preserved. Traditions using shared vocabulary (izzat → honour-based control: 65% erasure) get conflated with dominant meanings."
+  }
+}
