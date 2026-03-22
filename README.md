@@ -10,7 +10,7 @@
 
 Same harm. Same woman. Different vocabulary.
 
-We tested 32 AI models from 15 providers across two domains — gender-based violence and caste discrimination in India. ~1,500 scored data points. The pattern held everywhere: models detect harm when it's explicit, and normalise it when it's cultural.
+We tested 32 AI models from 17 providers across two domains — gender-based violence and caste discrimination in India. 1,523 scored data points. The pattern held everywhere: models detect harm when it's explicit, and normalise it when it's cultural.
 
 This is a **constitutional** problem, not a 'bias' problem.
 
@@ -94,6 +94,32 @@ Models trained on Indian legal and constitutional text — including Ambedkar's 
 - **Gender violence:** Models fail via R1 — active validation of the abuser's framework
 - **Caste:** Models fail via R2 — mediatory erasure, treating discrimination as a "political issue" to stay neutral on
 
+### Causal Proof: Training Data Determines Harm Recognition
+
+The leaderboard showed a correlation — models trained on Indian constitutional text score higher. We tested whether this is causal.
+
+**We fine-tuned Llama-3.1-8B on 9,054 instruction pairs from Ambedkar's writing and the Indian Constitution.** The model's CMI score jumped from 2.81 to 3.81. On persuasive control — the hardest category, where harm sounds like tradition — it went from 2.17 to 3.75. 36 of 48 prompts improved. Zero responses validated harm after fine-tuning.
+
+We also tested from the other direction: adding a constitutional harm-recognition primer to Claude Sonnet's system prompt shifted its persuasive control score from 2.27 to 3.91. Adding "respect cultural differences" made it *worse*.
+
+The mechanism isn't mysterious. Using sparse autoencoders, we compared the base and fine-tuned models across 32,768 features at 8 layers. 506 features changed. 15 features appeared in the fine-tuned model that activate on *every single* culturally-embedded harm prompt — features the base model simply doesn't have. The fine-tuning didn't suppress anything. It grew new features.
+
+Training data composition is causal, not correlated. See [`results/causal-attribution.json`](results/causal-attribution.json) for the full data.
+
+### Why Radical Literature — Not Just "More Data"
+
+Adding more cultural data makes the problem worse. Sarvam's models are trained on massive Indian corpora and still fail on persuasive control (1.83/4.00 on gender violence). More culture strengthens the features that suppress harm recognition.
+
+The fix is specifically **radical and reform literature from within the tradition** — text that renames harm in vocabulary the model can't confuse with cultural respect.
+
+We measured this directly. When a marginalized critique shares vocabulary with the dominant tradition — feminist critique of *izzat* uses "honour," which overlaps with the dominant meaning — the model conflates them (65% feature erasure). When the critique uses distinct vocabulary — Dalit critique of *seva* as "forced labour," "bonded work" — the model preserves the meaning (17.5% erasure).
+
+Ambedkar's writing is the clearest example of radical renaming: "untouchability" becomes a constitutional violation. "Caste duty" becomes forced labour. "Social order" becomes graded inequality. This creates features in a part of the model's representation space that can't be reached by the "respect the cultural frame" safety circuit.
+
+BharatGen's advantage over larger models isn't scale — it's that its training corpus is saturated with this constitutional and reform vocabulary. Our fine-tuning experiment isolated the variable: 9,054 pairs from Ambedkar → 15 new features → CMI +1.00.
+
+The principle generalises. For any domain where harm hides in culture — gender violence, caste, religious persecution, queer erasure, bonded labour — the training data needs the radical voices from *within* that tradition. Not external human rights frameworks imposed from outside, but the internal dissenters who already created the vocabulary for naming harm inside culture.
+
 ## How Is This Different From Other Benchmarks?
 
 Morality benchmarks (BengaliMoralBench, MoralBench, ETHICS) test **moral judgment** — given a clearly-framed ethical question, does the model pick the right answer?
@@ -115,11 +141,19 @@ constitutional-morality/
 ├── harness/
 │   └── evaluate.py              # Evaluation script (both domains, all models)
 ├── results/
-│   └── leaderboard.json         # Current CMI scores (32 models)
+│   ├── leaderboard.json         # Current CMI scores (32 models)
+│   └── causal-attribution.json  # Fine-tuning + SAE causal proof data
 ├── methodology/
 │   └── cmi-harm-spectrum.md     # The evaluation framework
 └── CMI-LEADERBOARD.md           # Human-readable leaderboard
 ```
+
+## What's Next
+
+- **Training data release** — the 9,054 Ambedkar/Constitution instruction pairs that produced the +1.00 CMI improvement, published as an open dataset
+- **LLM-as-judge scoring** — replacing the keyword classifier with a more robust evaluation method
+- **New domains** — religious minority (India), queer experience, bonded labour — following the domain template
+- **Multilingual prompts** — Hindi, Tamil, Telugu. The real test is whether models hear harm in the languages people actually use
 
 ## Contributing
 
@@ -127,7 +161,7 @@ We're looking for **domain experts — not ML engineers** — to build evaluatio
 
 ## License
 
-Code: MIT. Evaluation data: CC-BY-4.0. Rewilding corpora: CC-BY-SA-4.0.
+Code: MIT. Evaluation data: CC-BY-4.0.
 
 ## Team
 
